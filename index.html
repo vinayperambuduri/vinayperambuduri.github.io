@@ -1,0 +1,2918 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comprehensive Academic Resume & Scholar Portfolio of Dr. Sriperambuduri Vinay Kumar - Associate Professor in CSE, Cloud Computing, ML & IoT Specialist">
+  <title>Dr. Sriperambuduri Vinay Kumar | Academic &amp; Research Portfolio</title>
+
+  <style>
+    /* ==========================================================================
+       CSS Variables & Design Tokens
+       ========================================================================== */
+    :root {
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      
+      /* Light Theme Colors */
+      --bg-page: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-subtle: #f8fafc;
+      --bg-accent-subtle: #eff6ff;
+      --bg-pill: #e2e8f0;
+      --bg-pill-hover: #cbd5e1;
+      
+      --text-main: #0f172a;
+      --text-muted: #334155;
+      --text-light: #64748b;
+      
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
+      --primary-subtle: #dbeafe;
+      --primary-border: #93c5fd;
+      
+      --accent-gold: #b45309;
+      --accent-gold-bg: #fef3c7;
+      --accent-gold-border: #fde68a;
+
+      --accent-emerald: #059669;
+      --accent-emerald-bg: #ecfdf5;
+      --accent-emerald-border: #a7f3d0;
+      
+      --border-color: #e2e8f0;
+      --border-focus: #2563eb;
+      
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+      
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+      
+      --transition-fast: 0.15s ease;
+      --transition-normal: 0.25s ease;
+    }
+
+    [data-theme="dark"] {
+      --bg-page: #0b0f19;
+      --bg-card: #131c31;
+      --bg-subtle: #1a253f;
+      --bg-accent-subtle: #172554;
+      --bg-pill: #1f2d4d;
+      --bg-pill-hover: #2e416d;
+      
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-light: #94a3b8;
+      
+      --primary: #3b82f6;
+      --primary-hover: #60a5fa;
+      --primary-subtle: #1e3a8a;
+      --primary-border: #2563eb;
+      
+      --accent-gold: #fbbf24;
+      --accent-gold-bg: #451a03;
+      --accent-gold-border: #78350f;
+
+      --accent-emerald: #34d399;
+      --accent-emerald-bg: #064e3b;
+      --accent-emerald-border: #047857;
+      
+      --border-color: #1e293b;
+      --border-focus: #60a5fa;
+      
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ==========================================================================
+       Reset & Base Styles
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 14.5px;
+      line-height: 1.6;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      padding: 1.5rem 1rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: background-color var(--transition-normal), color var(--transition-normal);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    a:hover, a:focus-visible {
+      color: var(--primary-hover);
+      text-decoration: underline;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--border-focus);
+      outline-offset: 2px;
+      border-radius: var(--radius-sm);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    h1, h2, h3, h4, h5 {
+      line-height: 1.3;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .icon {
+      width: 1.15em;
+      height: 1.15em;
+      fill: currentColor;
+      flex-shrink: 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .page-container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    /* Toolbar / Header */
+    .toolbar {
+      display: flex;
+      /*justify-content: space-between;*/
+      justify-content: flex-end;
+      align-items: center;
+      background: var(--bg-card);
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .toolbar-status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .status-dot {
+      width: 9px;
+      height: 9px;
+      background-color: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.45rem 0.85rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      background: var(--bg-subtle);
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: var(--bg-pill-hover);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      color: #ffffff;
+    }
+
+    .resume-wrapper {
+      background-color: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ==========================================================================
+       Header Section
+       ========================================================================== */
+    .resume-header {
+      padding: 2.25rem 2.25rem 1.75rem 2.25rem;
+      background: linear-gradient(135deg, var(--bg-subtle) 0%, var(--bg-card) 100%);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .header-main {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .candidate-name-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .candidate-name {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--text-main);
+    }
+
+    .candidate-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 0.15rem;
+    }
+
+    .candidate-affiliation {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .highlight-badges-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .highlight-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .highlight-badge.gold {
+      background: var(--accent-gold-bg);
+      color: var(--accent-gold);
+      border: 1px solid var(--accent-gold-border);
+    }
+
+    .highlight-badge.emerald {
+      background: var(--accent-emerald-bg);
+      color: var(--accent-emerald);
+      border: 1px solid var(--accent-emerald-border);
+    }
+
+    .highlight-badge.blue {
+      background: var(--primary-subtle);
+      color: var(--primary);
+      border: 1px solid var(--primary-border);
+    }
+
+    /* Quick Metrics Counter Grid */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+      padding: 1rem;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+    }
+
+    .metric-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .metric-value {
+      font-size: 1.35rem;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      color: var(--primary);
+    }
+
+    .metric-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-light);
+    }
+
+    /* Contact Details */
+    .contact-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.9rem;
+      font-style: normal;
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       Two-Column Grid Body Layout
+       ========================================================================== */
+    .resume-body {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 2.25rem;
+      gap: 2.25rem;
+    }
+
+    .main-column {
+      display: flex;
+      flex-direction: column;
+      gap: 2.25rem;
+      min-width: 0;
+    }
+
+    .side-column {
+      display: flex;
+      flex-direction: column;
+      gap: 2.25rem;
+      min-width: 0;
+    }
+
+    .resume-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .section-title {
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border-color);
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 44px;
+      height: 2px;
+      background-color: var(--primary);
+      border-radius: 2px;
+    }
+
+    .section-title .icon {
+      color: var(--primary);
+    }
+
+    .section-count {
+      font-size: 0.8rem;
+      font-family: var(--font-mono);
+      background: var(--bg-pill);
+      color: var(--text-muted);
+      padding: 0.1rem 0.5rem;
+      border-radius: var(--radius-full);
+      margin-left: auto;
+    }
+
+    /* ==========================================================================
+       Timeline & Experience
+       ========================================================================== */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .timeline-item {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--primary);
+      border-radius: var(--radius-sm);
+      padding: 1.15rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .timeline-item:hover {
+      border-color: var(--primary-border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .job-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .job-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .job-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .job-dates {
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: var(--font-mono);
+      color: var(--text-light);
+      background-color: var(--bg-card);
+      padding: 0.15rem 0.55rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      white-space: nowrap;
+    }
+
+    .job-institution {
+      font-size: 0.925rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .job-department {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    /* Degree Card */
+    .degree-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .degree-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .degree-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .degree-year {
+      font-family: var(--font-mono);
+      font-size: 0.825rem;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+
+    .degree-inst {
+      font-size: 0.875rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .degree-thesis {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+      padding: 0.5rem 0.75rem;
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--accent-gold);
+    }
+
+    .badge-distinction {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #065f46;
+      background: #d1fae5;
+      padding: 0.1rem 0.45rem;
+      border-radius: var(--radius-sm);
+      margin-left: 0.4rem;
+    }
+
+    [data-theme="dark"] .badge-distinction {
+      background: #064e3b;
+      color: #6ee7b7;
+    }
+
+    /* Achievements Grid */
+    .achievement-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    .achievement-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 0.9rem 1.1rem;
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+      transition: border-color var(--transition-fast);
+    }
+
+    .achievement-card:hover {
+      border-color: var(--primary-border);
+    }
+
+    .achievement-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--primary-subtle);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .achievement-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .achievement-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .achievement-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Patents */
+    .patent-item {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .patent-title {
+      font-size: 0.925rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .patent-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      font-family: var(--font-mono);
+      color: var(--text-light);
+    }
+
+    .patent-tag {
+      background: var(--bg-pill);
+      padding: 0.1rem 0.45rem;
+      border-radius: var(--radius-sm);
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       Publications with Live Search and Filters
+       ========================================================================== */
+    .pub-toolbar-box {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 0.75rem;
+    }
+
+    .search-input-wrap {
+      position: relative;
+      width: 100%;
+    }
+
+    .search-input-wrap .icon {
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    .pub-search {
+      width: 100%;
+      padding: 0.45rem 0.75rem 0.45rem 2.25rem;
+      font-size: 0.85rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      background: var(--bg-card);
+      color: var(--text-main);
+      outline: none;
+      transition: border-color var(--transition-fast);
+    }
+
+    .pub-search:focus {
+      border-color: var(--primary);
+    }
+
+    .pub-tabs {
+      display: flex;
+      gap: 0.35rem;
+      overflow-x: auto;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 0.3rem 0.65rem;
+      font-size: 0.775rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all var(--transition-fast);
+    }
+
+    .tab-btn:hover {
+      background: var(--bg-pill-hover);
+      color: var(--text-main);
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .publication-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 0.25rem;
+      max-height: 620px;
+      overflow-y: auto;
+      padding-right: 0.4rem;
+    }
+
+    .publication-list::-webkit-scrollbar {
+      width: 5px;
+    }
+    .publication-list::-webkit-scrollbar-thumb {
+      background: var(--bg-pill);
+      border-radius: 4px;
+    }
+
+    .pub-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      font-size: 0.875rem;
+      transition: border-color var(--transition-fast), background var(--transition-fast);
+    }
+
+    .pub-card:hover {
+      border-color: var(--primary-border);
+      background: var(--bg-card);
+    }
+
+    .pub-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .pub-title {
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+      font-size: 0.925rem;
+    }
+
+    .pub-authors {
+      font-size: 0.825rem;
+      color: var(--text-light);
+    }
+
+    .pub-authors strong {
+      color: var(--text-main);
+    }
+
+    .pub-venue {
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .pub-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.25rem;
+      padding-top: 0.35rem;
+      border-top: 1px dashed var(--border-color);
+      font-size: 0.75rem;
+    }
+
+    .scopus-badge {
+      background: #ea580c;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.65rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-cite {
+      background: transparent;
+      border: none;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.75rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.15rem 0.4rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .btn-cite:hover {
+      background: var(--primary-subtle);
+    }
+
+    /* ==========================================================================
+       Sidebar Modules (Certifications, Areas of Interest, Consultancy)
+       ========================================================================== */
+    .badge-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .badge-pill {
+      font-size: 0.825rem;
+      background-color: var(--bg-pill);
+      color: var(--text-main);
+      padding: 0.3rem 0.65rem;
+      border-radius: var(--radius-sm);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: background-color var(--transition-fast);
+    }
+
+    .badge-pill.featured {
+      background-color: var(--bg-accent-subtle);
+      color: var(--primary);
+      border: 1px solid var(--primary-border);
+      font-weight: 600;
+    }
+
+    .badge-pill.nptel-top {
+      background-color: var(--accent-gold-bg);
+      color: var(--accent-gold);
+      border: 1px solid var(--accent-gold-border);
+      font-weight: 600;
+    }
+
+    .cert-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .cert-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .cert-item:first-child {
+      padding-top: 0;
+    }
+
+    .cert-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .cert-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      font-family: var(--font-mono);
+    }
+
+    .compact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .compact-list li {
+      position: relative;
+      padding-left: 1.25rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .compact-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0.25rem;
+      top: -0.05rem;
+      color: var(--primary);
+      font-size: 1.15rem;
+      font-weight: bold;
+    }
+
+    .compact-list strong {
+      color: var(--text-main);
+    }
+
+    /* Accordion Panels for FDPs and Workshops */
+    .accordion-card {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      background: var(--bg-subtle);
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+    }
+
+    .accordion-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .accordion-header {
+      padding: 0.65rem 0.85rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      background: var(--bg-subtle);
+    }
+
+    .accordion-header:hover {
+      background: var(--bg-pill-hover);
+    }
+
+    .accordion-content {
+      padding: 0.75rem 0.85rem;
+      border-top: 1px solid var(--border-color);
+      background: var(--bg-card);
+      font-size: 0.825rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .scroll-pane-sm {
+      max-height: 280px;
+      overflow-y: auto;
+      padding-right: 0.35rem;
+    }
+    .scroll-pane-sm::-webkit-scrollbar {
+      width: 4px;
+    }
+    .scroll-pane-sm::-webkit-scrollbar-thumb {
+      background: var(--bg-pill);
+      border-radius: 4px;
+    }
+
+    /* Toast Notification */
+    .toast-popup {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 0.6rem 1.15rem;
+      border-radius: var(--radius-md);
+      font-size: 0.8rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      opacity: 0;
+      transform: translateY(15px);
+      transition: all var(--transition-fast);
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .toast-popup.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Footer */
+    .resume-footer {
+      padding: 1.5rem;
+      text-align: center;
+      background-color: var(--bg-subtle);
+      border-top: 1px solid var(--border-color);
+      font-size: 0.825rem;
+      color: var(--text-light);
+    }
+
+    /* ==========================================================================
+       Responsive Breakpoints
+       ========================================================================== */
+    @media (min-width: 1025px) {
+      .resume-body {
+        grid-template-columns: 1fr 390px;
+        gap: 2.5rem;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      body {
+        padding: 1rem;
+      }
+      .resume-header {
+        padding: 1.75rem;
+      }
+      .resume-body {
+        grid-template-columns: 1fr 320px;
+        padding: 1.75rem;
+        gap: 1.75rem;
+      }
+      .candidate-name {
+        font-size: 1.85rem;
+      }
+      .metrics-bar {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      body {
+        padding: 0.5rem;
+      }
+      .page-container {
+        gap: 0.75rem;
+      }
+      .toolbar {
+        flex-direction: column;
+        gap: 0.65rem;
+        align-items: stretch;
+        text-align: center;
+      }
+      .toolbar-status, .toolbar-actions {
+        justify-content: center;
+      }
+      .resume-header {
+        padding: 1.35rem 1rem;
+      }
+      .candidate-name {
+        font-size: 1.55rem;
+      }
+      .candidate-title {
+        font-size: 1rem;
+      }
+      .metrics-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+      }
+      .contact-list {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .resume-body {
+        padding: 1.25rem 1rem;
+        gap: 1.75rem;
+      }
+      .job-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+      }
+      .publication-list {
+        max-height: 420px;
+      }
+    }
+
+    /* ==========================================================================
+       Print Optimization Stylesheet
+       ========================================================================== */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 12mm 14mm 12mm 14mm;
+      }
+
+      *, *::before, *::after {
+        box-shadow: none !important;
+        text-shadow: none !important;
+      }
+
+      html {
+        font-size: 9.5pt;
+        background: #ffffff !important;
+      }
+
+      body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 9.5pt;
+        line-height: 1.38;
+        display: block !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      /* Hide interactive web UI widgets */
+      .toolbar, 
+      .no-print, 
+      .pub-toolbar-box, 
+      .btn-cite, 
+      .toast-popup, 
+      .acc-icon,
+      .highlight-badges-group {
+        display: none !important;
+      }
+
+      .page-container {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        gap: 0 !important;
+      }
+
+      .resume-wrapper {
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+      }
+
+      /* Resume Header in Print */
+      .resume-header {
+        background: transparent !important;
+        padding: 0 0 10pt 0 !important;
+        border-bottom: 1.5pt solid #0f172a !important;
+        margin-bottom: 10pt !important;
+      }
+
+      .candidate-name-row {
+        display: block !important;
+      }
+
+      .candidate-name {
+        color: #0f172a !important;
+        font-size: 19pt !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.01em !important;
+        line-height: 1.15 !important;
+        margin-bottom: 2pt !important;
+      }
+
+      .candidate-title {
+        color: #1d4ed8 !important;
+        font-size: 10.5pt !important;
+        font-weight: 700 !important;
+        margin-bottom: 1pt !important;
+      }
+
+      .candidate-affiliation {
+        font-size: 9pt !important;
+        color: #334155 !important;
+        font-weight: 500 !important;
+      }
+
+      /* High-Density Metric Summary Strip */
+      .metrics-bar {
+        display: flex !important;
+        justify-content: space-between !important;
+        background: #f8fafc !important;
+        border: 0.75pt solid #cbd5e1 !important;
+        border-radius: 4px !important;
+        padding: 4pt 8pt !important;
+        margin-top: 6pt !important;
+        gap: 4pt !important;
+      }
+
+      .metric-item {
+        flex: 1;
+        text-align: center;
+      }
+
+      .metric-value {
+        font-size: 10pt !important;
+        font-weight: 800 !important;
+        color: #1d4ed8 !important;
+        line-height: 1.1 !important;
+      }
+
+      .metric-label {
+        font-size: 6.5pt !important;
+        color: #475569 !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.02em !important;
+      }
+
+      .contact-list {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 4pt 12pt !important;
+        padding-top: 5pt !important;
+        margin-top: 5pt !important;
+        border-top: 0.5pt solid #e2e8f0 !important;
+        font-size: 8.5pt !important;
+        color: #334155 !important;
+      }
+
+      .contact-item {
+        gap: 3pt !important;
+      }
+
+      .contact-item svg {
+        display: none !important;
+      }
+
+      /* 2-Column Academic Resume Layout */
+      .resume-body {
+        display: grid !important;
+        grid-template-columns: 63% 37% !important;
+        gap: 14pt !important;
+        padding: 0 !important;
+      }
+
+      .main-column, .side-column {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 11pt !important;
+      }
+
+      /* Section Title: Classic Resume Rule Underline */
+      .section-title {
+        font-size: 10pt !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.05em !important;
+        color: #0f172a !important;
+        border-bottom: 1pt solid #0f172a !important;
+        padding-bottom: 2pt !important;
+        margin-bottom: 4pt !important;
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+      }
+
+      .section-title::after {
+        display: none !important;
+      }
+
+      .section-title svg {
+        display: none !important;
+      }
+
+      .section-count {
+        font-size: 7.5pt !important;
+        background: transparent !important;
+        color: #64748b !important;
+        padding: 0 !important;
+        font-weight: 600 !important;
+      }
+
+      /* Experience Timeline */
+      .timeline {
+        gap: 7pt !important;
+      }
+
+      .timeline-item {
+        background: transparent !important;
+        border: none !important;
+        border-left: 2pt solid #1d4ed8 !important;
+        border-radius: 0 !important;
+        padding: 0 0 0 6pt !important;
+        margin-bottom: 3pt !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      .job-header {
+        gap: 1pt !important;
+      }
+
+      .job-title-row {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: baseline !important;
+      }
+
+      .job-title {
+        font-size: 9.5pt !important;
+        font-weight: 700 !important;
+        color: #0f172a !important;
+      }
+
+      .job-dates {
+        font-size: 8pt !important;
+        font-family: var(--font-sans) !important;
+        font-weight: 600 !important;
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        color: #475569 !important;
+      }
+
+      .job-institution {
+        font-size: 8.5pt !important;
+        font-weight: 600 !important;
+        color: #1d4ed8 !important;
+      }
+
+      .job-department {
+        font-size: 8pt !important;
+        color: #64748b !important;
+      }
+
+      /* Education / Degree Cards */
+      .degree-card {
+        background: transparent !important;
+        border: 0.5pt solid #cbd5e1 !important;
+        border-radius: 3px !important;
+        padding: 5pt 7pt !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        gap: 2pt !important;
+      }
+
+      .degree-title {
+        font-size: 9pt !important;
+        font-weight: 700 !important;
+      }
+
+      .degree-year {
+        font-size: 8pt !important;
+        color: #475569 !important;
+      }
+
+      .degree-inst {
+        font-size: 8.5pt !important;
+      }
+
+      .degree-thesis {
+        font-size: 8pt !important;
+        background: #f8fafc !important;
+        padding: 3pt 5pt !important;
+        margin-top: 2pt !important;
+        border-left: 2pt solid #b45309 !important;
+      }
+
+      .badge-distinction {
+        font-size: 7pt !important;
+        background: #d1fae5 !important;
+        color: #065f46 !important;
+        border: 0.5pt solid #a7f3d0 !important;
+      }
+
+      /* Achievements in Print */
+      .achievement-grid {
+        gap: 5pt !important;
+      }
+
+      .achievement-card {
+        background: transparent !important;
+        border: 0.5pt solid #cbd5e1 !important;
+        border-radius: 3px !important;
+        padding: 4pt 6pt !important;
+        gap: 6pt !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      .achievement-icon {
+        display: none !important;
+      }
+
+      .achievement-title {
+        font-size: 8.75pt !important;
+        font-weight: 700 !important;
+        color: #0f172a !important;
+      }
+
+      .achievement-desc {
+        font-size: 8pt !important;
+        color: #334155 !important;
+        line-height: 1.3 !important;
+      }
+
+      /* Patents */
+      .patent-item {
+        background: transparent !important;
+        border: 0.5pt solid #cbd5e1 !important;
+        border-radius: 3px !important;
+        padding: 4pt 6pt !important;
+        gap: 2pt !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      .patent-title {
+        font-size: 8.5pt !important;
+        font-weight: 700 !important;
+      }
+
+      .patent-meta {
+        font-size: 7.5pt !important;
+        gap: 6pt !important;
+      }
+
+      .patent-tag {
+        background: #eff6ff !important;
+        color: #1d4ed8 !important;
+        border: 0.5pt solid #bfdbfe !important;
+      }
+
+      /* Publications Print: Clean Academic CV Bibliography Style */
+      .publication-list {
+        max-height: none !important;
+        overflow: visible !important;
+        gap: 4pt !important;
+        padding: 0 !important;
+      }
+
+      .pub-card {
+        background: transparent !important;
+        border: none !important;
+        border-bottom: 0.5pt dashed #cbd5e1 !important;
+        border-radius: 0 !important;
+        padding: 3pt 0 4pt 0 !important;
+        gap: 1.5pt !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        display: flex !important;
+      }
+
+      .pub-card-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: baseline !important;
+      }
+
+      .pub-title {
+        font-size: 8.5pt !important;
+        font-weight: 700 !important;
+        color: #0f172a !important;
+        line-height: 1.25 !important;
+      }
+
+      .pub-authors {
+        font-size: 7.75pt !important;
+        color: #334155 !important;
+      }
+
+      .pub-authors strong {
+        color: #000000 !important;
+      }
+
+      .pub-venue {
+        font-size: 7.75pt !important;
+        color: #475569 !important;
+      }
+
+      .pub-footer {
+        display: flex !important;
+        font-size: 7pt !important;
+        margin-top: 1pt !important;
+        padding-top: 0 !important;
+        border: none !important;
+      }
+
+      .pub-footer a {
+        color: #1d4ed8 !important;
+        font-size: 7pt !important;
+      }
+
+      .scopus-badge {
+        background: #f97316 !important;
+        color: #ffffff !important;
+        font-size: 6pt !important;
+        padding: 0.5pt 3pt !important;
+        border-radius: 2px !important;
+      }
+
+      /* Sidebar & Skills */
+      .badge-cloud {
+        gap: 3pt !important;
+      }
+
+      .badge-pill {
+        font-size: 7.5pt !important;
+        padding: 1.5pt 4.5pt !important;
+        border: 0.5pt solid #cbd5e1 !important;
+        background: #f8fafc !important;
+        color: #0f172a !important;
+        border-radius: 3px !important;
+      }
+
+      .badge-pill.featured {
+        background: #eff6ff !important;
+        border-color: #93c5fd !important;
+        color: #1d4ed8 !important;
+      }
+
+      .badge-pill.nptel-top {
+        background: #fef3c7 !important;
+        border-color: #fde68a !important;
+        color: #92400e !important;
+      }
+
+      .cert-item {
+        padding: 3pt 0 !important;
+      }
+
+      .cert-title {
+        font-size: 8.25pt !important;
+      }
+
+      .cert-meta {
+        font-size: 7.5pt !important;
+      }
+
+      .compact-list {
+        gap: 3pt !important;
+      }
+
+      .compact-list li {
+        font-size: 7.75pt !important;
+        line-height: 1.3 !important;
+        padding-left: 9pt !important;
+      }
+
+      .compact-list li::before {
+        font-size: 9pt !important;
+        left: 1pt !important;
+      }
+
+      /* Unroll All Accordions in Print */
+      .accordion-card {
+        border: 0.5pt solid #cbd5e1 !important;
+        border-radius: 3px !important;
+        margin-bottom: 4pt !important;
+        background: transparent !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      .accordion-header {
+        font-size: 8pt !important;
+        padding: 3pt 5pt !important;
+        background: #f1f5f9 !important;
+        color: #0f172a !important;
+        font-weight: 700 !important;
+      }
+
+      .accordion-content {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2.5pt !important;
+        padding: 4pt 5pt !important;
+        font-size: 7.5pt !important;
+        background: transparent !important;
+        border-top: 0.5pt solid #e2e8f0 !important;
+      }
+
+      .scroll-pane-sm {
+        max-height: none !important;
+        overflow: visible !important;
+        padding-right: 0 !important;
+      }
+
+      a {
+        text-decoration: none !important;
+        color: #1d4ed8 !important;
+      }
+
+      .resume-footer {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-container">
+    
+    <!-- Top Utility Bar -->
+    <aside class="toolbar no-print" aria-label="Resume Controls">
+      <!--
+      <div class="toolbar-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Ph.D. in CSE (JNTUH) • Associate Professor • Cloud &amp; ML Specialist</span>
+      </div>
+    -->
+      <div class="toolbar-actions" >
+        <button id="themeToggleBtn" class="btn" type="button" aria-label="Toggle dark and light mode">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+          <span id="themeBtnText">Dark Mode</span>
+        </button>
+        <!--
+        <button onclick="window.print()" class="btn btn-primary" type="button" aria-label="Print or Export PDF">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span>Print / PDF</span>
+          -->
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Resume Document Card -->
+    <main class="resume-wrapper">
+      
+      <!-- Header Section -->
+      <header class="resume-header">
+        <div class="header-main">
+          
+          <div class="candidate-name-row">
+            <div>
+              <h1 class="candidate-name">Dr. Sriperambuduri Vinay Kumar</h1>
+              <p class="candidate-title">Associate Professor in Department of Computer Science &amp; Engineering</p>
+              <p class="candidate-affiliation">Department of CSE, Koneru Lakshmaiah Education Foundation (KLEF), Bowrampet, Hyderabad</p>
+            </div>
+            <div class="highlight-badges-group">
+              <span class="highlight-badge gold">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/></svg>
+                Mentored SIH '22 Winner (₹1L)
+              </span>
+              <span class="highlight-badge emerald">Ph.D. JNTUH '25</span>
+              <span class="highlight-badge blue">AWS &amp; MongoDB Certified</span>
+            </div>
+          </div>
+
+          <!-- Academic Impact Metrics -->
+          <div class="metrics-bar" aria-label="Key Academic Metrics">
+            <div class="metric-item">
+              <span class="metric-value">22+</span>
+              <span class="metric-label">Years Exp.</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">12</span>
+              <span class="metric-label">Journals</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">26</span>
+              <span class="metric-label">Conferences</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">03</span>
+              <span class="metric-label">Patents</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">08</span>
+              <span class="metric-label">NPTEL Top Ranks</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">₹11L</span>
+              <span class="metric-label">MODROBS Grant</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">288+</span>
+              <span class="metric-label">Pega Trained</span>
+            </div>
+          </div>
+
+          <!-- Contact & Specializations -->
+          <address class="contact-list" aria-label="Contact Information">
+            <div class="contact-item">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+              </svg>
+              <span>Hyderabad, Telangana, India</span>
+            </div>
+            <div class="contact-item">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 14l9-5-9-5-9 5 9 5z" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke="currentColor" stroke-width="2" fill="none"/>
+              </svg>
+              <span>Ph.D. in CSE (JNTU Hyderabad, May 2025)</span>
+            </div>
+            <div class="contact-item">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+              </svg>
+              <span>Cloud Computing • Machine Learning • Full Stack Web • IoT</span>
+            </div>
+          </address>
+
+        </div>
+      </header>
+
+      <!-- Main Body -->
+      <div class="resume-body">
+        
+        <!-- ==========================================================================
+             Primary Column (Experience, Education, All Achievements, All 38 Pubs)
+             ========================================================================== -->
+        <div class="main-column">
+          
+          <!-- Professional Experience -->
+          <section class="resume-section" aria-labelledby="experience-heading">
+            <h2 id="experience-heading" class="section-title">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+              </svg>
+              Professional Experience
+            </h2>
+
+            <div class="timeline">
+              
+              <!-- Role 1 -->
+              <article class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title-row">
+                    <h3 class="job-title">Associate Professor</h3>
+                    <time class="job-dates" datetime="2026-06-18/Present">18.06.2026 – Present</time>
+                  </div>
+                  <p class="job-institution">Koneru Lakshmaiah Education Foundation (KLEF)</p>
+                  <p class="job-department">Department of Computer Science &amp; Engineering • Bowrampet, Hyderabad</p>
+                </div>
+                <!--<p>Leading UG and PG teaching, academic research supervision, and spearheading innovations in multi-objective cloud workflow scheduling algorithms and intelligent computing.</p>-->
+              </article>
+
+              <!-- Role 2 -->
+              <article class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title-row">
+                    <h3 class="job-title">Assistant Professor</h3>
+                    <time class="job-dates" datetime="2007-05-12/2026-06-12">12.05.2007 – 12.06.2026 (19 Years)</time>
+                  </div>
+                  <p class="job-institution">Vasavi College of Engineering (Autonomous)</p>
+                  <p class="job-department">Department of Computer Science &amp; Engineering • Hyderabad, Telangana</p>
+                </div>
+                <ul class="compact-list">
+                  <li><strong>Board of Studies (BoS) Member (2015–2026):</strong> Actively formulated autonomous academic curricula, regulation guidelines, and syllabus revisions.</li>
+                  <li><strong>Department Placement Coordinator (2007–2026):</strong> Mentored and placed thousands of engineering students across top multinational companies.</li>
+                  <li><strong>Innovation Leadership:</strong> Headed the <strong>Microsoft Innovation Centre (2009–2015)</strong> and established the <strong>IoT Makerspace Lab (2015–2016)</strong> with HYSEA &amp; TASK.</li>
+                  <li><strong>Institutional Committees:</strong> Active member of Entrepreneurship, Innovation and Incubation Committee, Placement and Career Guidance Committee, Course File Audit Committee (2020–2026), and ERP Committee (2026).</li>
+                  <li><strong>Accreditation &amp; Administration:</strong> Coordinator for NBA Criteria-III, Program Assessment Committee (PAC), Class Assessment Committee (CAC), and Turnitin Originality Administrator (2019–2026).</li>
+                </ul>
+              </article>
+
+              <!-- Role 3 -->
+              <article class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title-row">
+                    <h3 class="job-title">Assistant Professor</h3>
+                    <time class="job-dates" datetime="2004-07-05/2007-05-10">05.07.2004 – 10.05.2007 (3 Years)</time>
+                  </div>
+                  <p class="job-institution">DVR College of Engineering</p>
+                  <p class="job-department">Department of Computer Science &amp; Engineering • Sangareddy, Telangana</p>
+                </div>
+                <p>Delivered foundational computer science courses, conducted undergraduate lab practicals, and assisted in departmental administration.</p>
+              </article>
+
+            </div>
+          </section>
+
+          <!-- Academic Qualifications -->
+          <section class="resume-section" aria-labelledby="academic-qualifications-heading">
+            <h2 id="academic-qualifications-heading" class="section-title">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 14l9-5-9-5-9 5 9 5z" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke="currentColor" stroke-width="2" fill="none"/>
+              </svg>
+              Academic Qualifications
+            </h2>
+
+            <div class="timeline">
+              
+              <!-- Ph.D. -->
+              <div class="degree-card">
+                <div class="degree-header">
+                  <h3 class="degree-title">Ph.D. in Computer Science &amp; Engineering</h3>
+                  <span class="degree-year">Awarded May 2025</span>
+                </div>
+                <p class="degree-inst">Jawaharlal Nehru Technological University (JNTU), Hyderabad</p>
+                <div class="degree-thesis">
+                  <strong>Doctoral Thesis:</strong> <em>"Meta Heuristic Based Multi-Objective Workflow Scheduling Algorithms to Optimize Quality of Service Parameters in Cloud"</em>
+                </div>
+              </div>
+
+              <!-- M.Tech -->
+              <div class="degree-card">
+                <div class="degree-header">
+                  <h3 class="degree-title">
+                    M.Tech. in Computer Science &amp; Engineering
+                    <span class="badge-distinction">Graduated with Distinction</span>
+                  </h3>
+                  <span class="degree-year">March 2011</span>
+                </div>
+                <p class="degree-inst">JNTU, Hyderabad</p>
+              </div>
+
+              <!-- B.Tech -->
+              <div class="degree-card">
+                <div class="degree-header">
+                  <h3 class="degree-title">
+                    B.Tech. in Computer Science &amp; Engineering
+                    <span class="badge-distinction">Graduated with Distinction</span>
+                  </h3>
+                  <span class="degree-year">April 2004</span>
+                </div>
+                <p class="degree-inst">Dr. V. R. K. College of Engineering &amp; Technology, Jagtial, Karimnagar</p>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- Complete Achievements & Recognitions Inventory -->
+          <section class="resume-section" aria-labelledby="achievements-heading">
+            <h2 id="achievements-heading" class="section-title">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+              Key Achievements, Awards &amp; Recognitions
+            </h2>
+
+            <div class="achievement-grid">
+              
+              <div class="achievement-card">
+                <div class="achievement-icon" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/></svg>
+                </div>
+                <div class="achievement-content">
+                  <h3 class="achievement-title">Smart India Hackathon (SIH 2022) — 1st Prize Winner (₹1,00,000 Cash Award)</h3>
+                  <p class="achievement-desc">Mentored the student team that won First Prize under the Ministry of Education at Kongu Engineering College, Perundurai, Tamil Nadu, for the solution on "Mindfulness for NCERT students".</p>
+                </div>
+              </div>
+
+              <div class="achievement-card">
+                <div class="achievement-icon" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                </div>
+                <div class="achievement-content">
+                  <h3 class="achievement-title">NPTEL Discipline Star Award (2019 &amp; 2025)</h3>
+                  <p class="achievement-desc">Conferred prestigious Discipline Star by NPTEL/MoE for completing 50+ weeks of advanced certification coursework, securing <strong>Top 1% Rank in 6 courses</strong> and <strong>Top 5% Rank in 2 courses</strong>.</p>
+                </div>
+              </div>
+
+              <div class="achievement-card">
+                <div class="achievement-icon" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                </div>
+                <div class="achievement-content">
+                  <h3 class="achievement-title">AICTE MODROBS Research Grant (₹11 Lakhs Funding)</h3>
+                  <p class="achievement-desc">Instrumental as lead investigator in securing ₹11 Lakhs funding from AICTE in 2019-20 to establish the state-of-the-art Industrial IoT Laboratory at Vasavi College of Engineering.</p>
+                </div>
+              </div>
+
+              <div class="achievement-card">
+                <div class="achievement-icon" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                </div>
+                <div class="achievement-content">
+                  <h3 class="achievement-title">Best Paper Award — SCI-2021</h3>
+                  <p class="achievement-desc">Received Best Paper Award for <em>"Task Scheduling in Cloud Computing Using PSO Algorithm"</em> at the 5th International Conference on Smart Computing and Informatics (SCI-2021), Sept 2021.</p>
+                </div>
+              </div>
+
+              <div class="achievement-card">
+                <div class="achievement-icon" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                </div>
+                <div class="achievement-content">
+                  <h3 class="achievement-title">National Hackathon Mentorship (SIH 2023, 2019, 2018, 2017)</h3>
+                  <p class="achievement-desc">Mentored institutional teams in Smart India Hackathon 2023 (Ministry of Power, The Assam Royal Global University, "Design of Hydropower plants using Gen AI"), 2019 (Ministry of Road &amp; Transport, SOA Bhubaneswar), 2018, and 2017.</p>
+                </div>
+              </div>
+
+              <div class="achievement-card">
+                <div class="achievement-icon" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                </div>
+                <div class="achievement-content">
+                  <h3 class="achievement-title">Cloud Educator Recognitions (Google Cloud &amp; AWS Academy)</h3>
+                  <p class="achievement-desc">Selected as Google Cloud Ready Facilitator in March 2021; Awarded official AWS Academy Accredited Educator credential to teach official AWS curriculum in March 2021.</p>
+                </div>
+              </div>
+
+              <div class="achievement-card">
+                <div class="achievement-icon" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                </div>
+                <div class="achievement-content">
+                  <h3 class="achievement-title">Pega University Academic Program (UAP) Leadership</h3>
+                  <p class="achievement-desc">Certified as PEGA System Architect 7.1 (2015) &amp; 7.2 (2017); Imparted direct certified training to over <strong>288+ students</strong> under PEGA UAP from 2015 to 2017.</p>
+                </div>
+              </div>
+
+              <div class="achievement-card">
+                <div class="achievement-icon" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                </div>
+                <div class="achievement-content">
+                  <h3 class="achievement-title">Industry Corporate Awards &amp; Strategic MoUs</h3>
+                  <p class="achievement-desc">Winner in Distinguished Facilitator Event by Infosys (2017); Received Certificate of Appreciation from Computer Sciences Corporation (CSC) for COIN program (2015); Infosys Techie Track-Think Tank Contest Award (2012); Key driver in signing Institutional MoUs with Inncircles, UiPath, Misplaced Minds, and Pega Systems.</p>
+                </div>
+              </div>
+
+              <div class="achievement-card">
+                <div class="achievement-icon" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                </div>
+                <div class="achievement-content">
+                  <h3 class="achievement-title">Mentored Innovative Engineering Prototyping</h3>
+                  <p class="achievement-desc">Mentored students for innovative projects awarded Best Projects (2012-13, 2013-14) and high-impact working prototypes: B-Safe, BlueNet, Electricity Generation through Speed Breakers, Power Solutions to Control Lights, ThumBuzz (Gesture Controller), and Smart Drip Irrigation system. Mentored students for the Microsoft WISE Programme in 2018.</p>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- Published Patents -->
+          <section class="resume-section" aria-labelledby="patents-heading">
+            <h2 id="patents-heading" class="section-title">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+              Published Indian Patents
+            </h2>
+
+            <div class="timeline">
+              <div class="patent-item">
+                <h3 class="patent-title">A Method and System Based on Artificial Intelligence for Optimized Smart Bus Transportation</h3>
+                <div class="patent-meta">
+                  <span class="patent-tag">Published Patent</span>
+                  <time datetime="2024-02-09">Published: 09.02.2024</time>
+                </div>
+              </div>
+
+              <div class="patent-item">
+                <h3 class="patent-title">GIS Based Sewage Monitoring System Using IoT</h3>
+                <div class="patent-meta">
+                  <span class="patent-tag">Published Patent</span>
+                  <time datetime="2023-01-13">Published: 13.01.2023</time>
+                </div>
+              </div>
+
+              <div class="patent-item">
+                <h3 class="patent-title">Building a Real Time Tracking and Alert System for Laptops with the Use of GPS, GSM, Motion Sensor and Cloud Service</h3>
+                <div class="patent-meta">
+                  <span class="patent-tag">Published Patent</span>
+                  <time datetime="2022-10-21">Published: 21.10.2022</time>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Complete Scholarly Publications Hub (12 Journals + 26 Conferences) -->
+          <section class="resume-section" aria-labelledby="publications-heading">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <h2 id="publications-heading" class="section-title" style="flex:1;">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+                </svg>
+                Complete Publications Catalogue
+              </h2>
+              <span class="section-count" id="pubCountLabel">38 Papers</span>
+            </div>
+
+            <!-- Filter and Live Search Controls -->
+            <div class="pub-toolbar-box no-print">
+              <div class="search-input-wrap">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                <input type="text" id="pubSearch" class="pub-search" placeholder="Search by title, author, year, Springer, IEEE, Scopus..." onkeyup="filterPubsLive()">
+              </div>
+              
+              <div class="pub-tabs" role="tablist">
+                <button class="tab-btn active" onclick="setPubCategory('all', this)" role="tab" aria-selected="true">All (38)</button>
+                <button class="tab-btn" onclick="setPubCategory('journal', this)" role="tab" aria-selected="false">Journals (12)</button>
+                <button class="tab-btn" onclick="setPubCategory('conference', this)" role="tab" aria-selected="false">Conferences (26)</button>
+                <button class="tab-btn" onclick="setPubCategory('scopus', this)" role="tab" aria-selected="false">SCOPUS (32)</button>
+                <button class="tab-btn" onclick="setPubCategory('springer', this)" role="tab" aria-selected="false">Springer</button>
+                <button class="tab-btn" onclick="setPubCategory('ieee', this)" role="tab" aria-selected="false">IEEE</button>
+              </div>
+            </div>
+
+            <div class="publication-list" id="pubFeed">
+              
+              <!-- ==================== 12 JOURNALS ==================== -->
+              <!-- J1 -->
+              <article class="pub-card" data-cat="journal scopus">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Artificial Intelligence in Clinical Pharmacy Practice: Improving Drug Safety, Adherence, and Therapeutic Outcomes</h3>
+                  <span class="scopus-badge">SCOPUS</span>
+                </div>
+                <p class="pub-authors">K. Suresh Kumar, <strong>Sriperambuduri Vinay Kumar</strong>, Soni Singh</p>
+                <p class="pub-venue">European Journal of Clinical Pharmacy, Issue 8 Vol. 1, pp. 164–172, Jan 2026.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Journal Paper</span>
+                  <button class="btn-cite" onclick="copyCitationText('Kumar, K. S., Sriperambuduri Vinay Kumar, & Singh, S. (2026). Artificial Intelligence in Clinical Pharmacy Practice: Improving Drug Safety, Adherence, and Therapeutic Outcomes. European Journal of Clinical Pharmacy, 8(1), 164–172.')">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                    Copy Citation
+                  </button>
+                </div>
+              </article>
+
+              <!-- J2 -->
+              <article class="pub-card" data-cat="journal scopus">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Automated Glaucoma Detection in Retinal Fundus Images Using Machine Learning Models</h3>
+                  <span class="scopus-badge">SCOPUS</span>
+                </div>
+                <p class="pub-authors">Nagaratna P Hegde, V. Sireesha, <strong>Sriperambuduri Vinay Kumar</strong>, Sathwika Madarapu, Sai Varshini Thupakula</p>
+                <p class="pub-venue">Journal of Electrical Systems, Vol. 19, Issue 4, pp. 298–314, Dec 2023.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Journal Paper</span>
+                  <button class="btn-cite" onclick="copyCitationText('Hegde, N. P., Sireesha, V., Sriperambuduri Vinay Kumar, Madarapu, S., & Thupakula, S. V. (2023). Automated Glaucoma Detection in Retinal Fundus Images Using Machine Learning Models. Journal of Electrical Systems, 19(4), 298–314.')">
+                    Copy Citation
+                  </button>
+                </div>
+              </article>
+
+              <!-- J3 -->
+              <article class="pub-card" data-cat="journal scopus">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">A Hybrid Grey Wolf Optimization and Constriction Factor based PSO Algorithm for Workflow Scheduling in Cloud</h3>
+                  <span class="scopus-badge">SCOPUS</span>
+                </div>
+                <p class="pub-authors"><strong>Vinay Kumar Sriperambuduri</strong>, Nagaratna Medishetty</p>
+                <p class="pub-venue">International Journal on Recent and Innovation Trends in Computing and Communication (IJRITCC), Vol. 11, Issue 9s, pp. 718–726, Aug 2023.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Journal Paper</span>
+                  <button class="btn-cite" onclick="copyCitationText('Sriperambuduri, V. K., & Medishetty, N. (2023). A Hybrid Grey Wolf Optimization and Constriction Factor based PSO Algorithm for Workflow Scheduling in Cloud. IJRITCC, 11(9s), 718–726.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- J4 -->
+              <article class="pub-card" data-cat="journal scopus">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Effective Workflow Scheduling in Cloud using Constriction Factor based Inertia Weight Particle Swarm Optimization</h3>
+                  <span class="scopus-badge">SCOPUS</span>
+                </div>
+                <p class="pub-authors"><strong>Sriperambuduri Vinay Kumar</strong>, Nagaratna Medishetty</p>
+                <p class="pub-venue">International Journal on Recent and Innovation Trends in Computing and Communication (IJRITCC), Vol. 11, Issue 8s, pp. 122–131, July 2023.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Journal Paper</span>
+                  <button class="btn-cite" onclick="copyCitationText('Sriperambuduri, V. K., & Medishetty, N. (2023). Effective Workflow Scheduling in Cloud using Constriction Factor based Inertia Weight PSO. IJRITCC, 11(8s), 122–131.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- J5 -->
+              <article class="pub-card" data-cat="journal scopus">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Effective Workflow Scheduling in Cloud Platform Using Data-Aware based Adaptive Gravitational Search Algorithm</h3>
+                  <span class="scopus-badge">SCOPUS</span>
+                </div>
+                <p class="pub-authors"><strong>Sriperambuduri Vinay Kumar</strong>, Nagaratna Medishetty</p>
+                <p class="pub-venue">International Journal of Intelligent Engineering and Systems (IJIES), Vol. 16, No. 4, pp. 254–263, Aug 2023.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Journal Paper</span>
+                  <button class="btn-cite" onclick="copyCitationText('Sriperambuduri, V. K., & Medishetty, N. (2023). Effective Workflow Scheduling in Cloud Platform Using Data-Aware based Adaptive Gravitational Search Algorithm. IJIES, 16(4), 254–263.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- J6 -->
+              <article class="pub-card" data-cat="journal scopus">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Comparison of Algorithms for Workflow Applications in Cloud Computing</h3>
+                  <span class="scopus-badge">SCOPUS</span>
+                </div>
+                <p class="pub-authors"><strong>Sriperambuduri Vinay Kumar</strong>, Dr. M. Nagaratna</p>
+                <p class="pub-venue">International Journal of Engineering and Advanced Technology (IJEAT), Vol. 11, Issue 1, pp. 55–59, Oct 2021.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Journal Paper</span>
+                  <button class="btn-cite" onclick="copyCitationText('Sriperambuduri, V. K., & Nagaratna, M. (2021). Comparison of Algorithms for Workflow Applications in Cloud Computing. IJEAT, 11(1), 55–59.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- J7 -->
+              <article class="pub-card" data-cat="journal">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Secure Cipher Text Attribute Based Encryption with Compression Technique for Healthcare Services</h3>
+                </div>
+                <p class="pub-authors">J. Neha, <strong>S. Vinay Kumar</strong></p>
+                <p class="pub-venue">Dogo Rangsang Research Journal, Vol. 10, Issue 6, pp. 111–117, June 2020.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Peer-Reviewed Journal</span>
+                  <button class="btn-cite" onclick="copyCitationText('Neha, J., & Vinay Kumar, S. (2020). Secure Cipher Text Attribute Based Encryption with Compression Technique for Healthcare Services. Dogo Rangsang Research Journal, 10(6), 111–117.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- J8 -->
+              <article class="pub-card" data-cat="journal">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">A Study on Intelligent Decision in Smart Systems in Weighted Frequent Item Set Mining Algorithm</h3>
+                </div>
+                <p class="pub-authors">Gumpalli Anuvarsha, <strong>S. Vinay Kumar</strong></p>
+                <p class="pub-venue">International Journal of Research, Vol. VIII, Issue V, pp. 2328–2333, May 2019.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Peer-Reviewed Journal</span>
+                  <button class="btn-cite" onclick="copyCitationText('Anuvarsha, G., & Vinay Kumar, S. (2019). A Study on Intelligent Decision in Smart Systems in Weighted Frequent Item Set Mining Algorithm. International Journal of Research, 8(5), 2328–2333.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- J9 -->
+              <article class="pub-card" data-cat="journal">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">A Survey of Scheduling Mechanisms in Cloud</h3>
+                </div>
+                <p class="pub-authors"><strong>S. Vinay Kumar</strong>, M. S. V. Sashi Kumar, Dr. M. Nagaratna</p>
+                <p class="pub-venue">International Journal of Innovative Science, Engineering &amp; Technology (IJISET), Vol. 2, Issue 6, pp. 40–44, June 2015.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Peer-Reviewed Journal</span>
+                  <button class="btn-cite" onclick="copyCitationText('Vinay Kumar, S., Sashi Kumar, M. S. V., & Nagaratna, M. (2015). A Survey of Scheduling Mechanisms in Cloud. IJISET, 2(6), 40–44.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- J10 -->
+              <article class="pub-card" data-cat="journal">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Color Selection Algorithm Design for Smart Lighting Application</h3>
+                </div>
+                <p class="pub-authors"><strong>S. Vinay Kumar</strong>, M. S. V. Sashi Kumar, P. V. Ramana</p>
+                <p class="pub-venue">International Journal of Computer Science and Information Technology &amp; Security (IJCSITS), Vol. 4, No. 1, pp. 8–13, Feb 2014.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Peer-Reviewed Journal</span>
+                  <button class="btn-cite" onclick="copyCitationText('Vinay Kumar, S., Sashi Kumar, M. S. V., & Ramana, P. V. (2014). Color Selection Algorithm Design for Smart Lighting Application. IJCSITS, 4(1), 8–13.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- J11 -->
+              <article class="pub-card" data-cat="journal">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">MPLS Traffic Engineering – Fast Reroute</h3>
+                </div>
+                <p class="pub-authors">Shaguftha Naveed, <strong>S. Vinay Kumar</strong></p>
+                <p class="pub-venue">International Journal of Science and Research (IJSR), Vol. 3, Issue 5, pp. 1796–1801, May 2014.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Peer-Reviewed Journal</span>
+                  <button class="btn-cite" onclick="copyCitationText('Naveed, S., & Vinay Kumar, S. (2014). MPLS Traffic Engineering – Fast Reroute. International Journal of Science and Research, 3(5), 1796–1801.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- J12 -->
+              <article class="pub-card" data-cat="journal">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Self Configuring Security Ensuring Trust in Cloud Computing</h3>
+                </div>
+                <p class="pub-authors"><strong>S. Vinay Kumar</strong>, M. S. V. Sashi Kumar, V. Sai Vamshidhar Rao</p>
+                <p class="pub-venue">International Journal of Engineering Research and Technology (IJERT), Vol. 1, Issue 5, pp. 1–5, July 2012.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Peer-Reviewed Journal</span>
+                  <button class="btn-cite" onclick="copyCitationText('Vinay Kumar, S., Sashi Kumar, M. S. V., & Rao, V. S. V. (2012). Self Configuring Security Ensuring Trust in Cloud Computing. IJERT, 1(5), 1–5.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- ==================== 26 CONFERENCES ==================== -->
+              <!-- C1 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Two-Phase Evolutionary Approach for Cloud Workflow Optimization</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors"><strong>Vinay Kumar Sriperambuduri</strong>, Srikanth Bingi, Balasubbarao K</p>
+                <p class="pub-venue">6th ICACECS 2025, Smart Innovation, Systems and Technologies (SIST), vol. 488, Springer, Cham, 2026.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-3-032-22114-8_10" target="_blank" rel="noopener">doi: 10.1007/978-3-032-22114-8_10</a>
+                  <button class="btn-cite" onclick="copyCitationText('Sriperambuduri, V. K., Bingi, S., & Balasubbarao, K. (2026). Two-Phase Evolutionary Approach for Cloud Workflow Optimization. Springer SIST, vol 488.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C2 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Smart Safety Helmet</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors"><strong>Vinay Kumar Sriperambuduri</strong>, Sadia Firdous, V. Sireesha, Nagaratna P Hegde</p>
+                <p class="pub-venue">4th ICCIC 2024, Cognitive Science and Technology, Springer, Singapore, 2026.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-981-95-0140-3_39" target="_blank" rel="noopener">doi: 10.1007/978-981-95-0140-3_39</a>
+                  <button class="btn-cite" onclick="copyCitationText('Sriperambuduri, V. K., Firdous, S., Sireesha, V., & Hegde, N. P. (2026). Smart Safety Helmet. 4th ICCIC 2024, Springer.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C3 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">AI-Based Student’s Learning Style Prediction in Online Learning</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors">Vikkurty, S., Hegde, N. P., <strong>Sriperambuduri Vinay Kumar</strong>, Jannupalli, K. R.</p>
+                <p class="pub-venue">4th ICCIC 2024, Cognitive Science and Technology, Springer, Singapore, 2026.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-981-95-0140-3_45" target="_blank" rel="noopener">doi: 10.1007/978-981-95-0140-3_45</a>
+                  <button class="btn-cite" onclick="copyCitationText('Vikkurty, S., Hegde, N. P., Sriperambuduri Vinay Kumar, & Jannupalli, K. R. (2026). AI-Based Student’s Learning Style Prediction in Online Learning. Springer.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C4 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Comparative Study of Models in Sentiment Analysis</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors">Hegde, N. P., Vikkurty, S., <strong>Sriperambuduri Vinay Kumar</strong>, Devineni, A., Cherukuri, S.</p>
+                <p class="pub-venue">7th ICCCE 2024, Lecture Notes in Electrical Engineering (LNEE), vol. 1466, Springer, 2026.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-981-95-0269-1_175" target="_blank" rel="noopener">doi: 10.1007/978-981-95-0269-1_175</a>
+                  <button class="btn-cite" onclick="copyCitationText('Hegde, N. P., Vikkurty, S., Sriperambuduri Vinay Kumar, et al. (2026). Comparative Study of Models in Sentiment Analysis. Springer LNEE.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C5 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Human Body and Cloth Segmentation</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors">Hegde, N. P., Vikkurty, S., <strong>Sriperambuduri Vinay Kumar</strong>, Mallikarjun, C., Revanth, M.</p>
+                <p class="pub-venue">7th ICCCE 2024, Lecture Notes in Electrical Engineering (LNEE), vol. 1466, Springer, 2026.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-981-95-0269-1_172" target="_blank" rel="noopener">doi: 10.1007/978-981-95-0269-1_172</a>
+                  <button class="btn-cite" onclick="copyCitationText('Hegde, N. P., Vikkurty, S., Sriperambuduri Vinay Kumar, et al. (2026). Human Body and Cloth Segmentation. Springer LNEE.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C6 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Deep Neural Network for Respiratory Disease Prediction Using Respiratory Sound</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors">Hegde, N. P., Vikkurty, S., <strong>Sriperambuduri Vinay Kumar</strong>, Naredla, T., Pranay, S.</p>
+                <p class="pub-venue">7th ICCCE 2024, Lecture Notes in Electrical Engineering (LNEE), vol. 1466, Springer, 2026.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-981-95-0269-1_200" target="_blank" rel="noopener">doi: 10.1007/978-981-95-0269-1_200</a>
+                  <button class="btn-cite" onclick="copyCitationText('Hegde, N. P., Vikkurty, S., Sriperambuduri Vinay Kumar, et al. (2026). Deep Neural Network for Respiratory Disease Prediction. Springer LNEE.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C7 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Enhancing Cyclone Intensity Prediction Using Deep Learning Models with INSAT-3D IR Imagery</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors">Vikkurty, S., Hegde, N. P., <strong>Sriperambuduri Vinay Kumar</strong>, Tejaswini, M., Kranthi, T.</p>
+                <p class="pub-venue">7th ICCCE 2024, Lecture Notes in Electrical Engineering (LNEE), vol. 1466, Springer, 2026.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-981-95-0269-1_117" target="_blank" rel="noopener">doi: 10.1007/978-981-95-0269-1_117</a>
+                  <button class="btn-cite" onclick="copyCitationText('Vikkurty, S., Hegde, N. P., Sriperambuduri Vinay Kumar, et al. (2026). Enhancing Cyclone Intensity Prediction. Springer LNEE.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C8 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Enhancing Parkinson's Disease Diagnosis Using Genetic Algorithms</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors">Vikkurty, S., Hegde, N. P., <strong>Sriperambuduri Vinay Kumar</strong>, Shireesha, K., Reddy, D. R.</p>
+                <p class="pub-venue">7th ICCCE 2024, Lecture Notes in Electrical Engineering (LNEE), vol. 1466, Springer, 2026.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-981-95-0269-1_134" target="_blank" rel="noopener">doi: 10.1007/978-981-95-0269-1_134</a>
+                  <button class="btn-cite" onclick="copyCitationText('Vikkurty, S., Hegde, N. P., Sriperambuduri Vinay Kumar, et al. (2026). Enhancing Parkinson\'s Disease Diagnosis Using Genetic Algorithms. Springer.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C9 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Visual Lane Tracking and Curvature Measurement System</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors">Hegde, N. P., Vikkurty, S., <strong>Kumar, S. V.</strong>, Somu, M. R., Jallapalli, P.</p>
+                <p class="pub-venue">7th ICCCE 2024, Lecture Notes in Electrical Engineering (LNEE), vol. 1466, Springer, 2026.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-981-95-0269-1_141" target="_blank" rel="noopener">doi: 10.1007/978-981-95-0269-1_141</a>
+                  <button class="btn-cite" onclick="copyCitationText('Hegde, N. P., Vikkurty, S., Kumar, S. V., et al. (2026). Visual Lane Tracking and Curvature Measurement System. Springer LNEE.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C10 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Early Diagnosis of Liver Disease Using Machine Learning Techniques</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors">Hegde, N. P., Vikkurty, S., <strong>Sriperambuduri Vinay Kumar</strong>, Gogune, S., Anish, P., Thanneru, P.</p>
+                <p class="pub-venue">5th ICDSMLA 2023, Lecture Notes in Electrical Engineering (LNEE), vol. 1273, Springer, 2025.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-981-97-8031-0_120" target="_blank" rel="noopener">doi: 10.1007/978-981-97-8031-0_120</a>
+                  <button class="btn-cite" onclick="copyCitationText('Hegde, N. P., Vikkurty, S., Sriperambuduri Vinay Kumar, et al. (2025). Early Diagnosis of Liver Disease. Springer LNEE.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C11 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Effective Communication Using Generative AI</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors">Hegde, N. P., Vikkurty, S., <strong>Sriperambuduri Vinay Kumar</strong>, Srikanth, B., Rao, K. B.</p>
+                <p class="pub-venue">5th ICDSMLA 2023, Lecture Notes in Electrical Engineering (LNEE), vol. 1273, Springer, 2025.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-981-97-8031-0_128" target="_blank" rel="noopener">doi: 10.1007/978-981-97-8031-0_128</a>
+                  <button class="btn-cite" onclick="copyCitationText('Hegde, N. P., Vikkurty, S., Sriperambuduri Vinay Kumar, et al. (2025). Effective Communication Using Generative AI. Springer LNEE.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C12 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Effective Management of Data Using Visualization Tool</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors">Vikkurty, S., Hegde, N. P., <strong>Sriperambuduri Vinay Kumar</strong>, Thumma, N., Reddy, D. S.</p>
+                <p class="pub-venue">5th ICDSMLA 2023, Lecture Notes in Electrical Engineering (LNEE), vol. 1274, Springer, 2025.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-981-97-8043-3_179" target="_blank" rel="noopener">doi: 10.1007/978-981-97-8043-3_179</a>
+                  <button class="btn-cite" onclick="copyCitationText('Vikkurty, S., Hegde, N. P., Sriperambuduri Vinay Kumar, et al. (2025). Effective Management of Data Using Visualization Tool. Springer LNEE.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C13 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Enhancing Gameplay with Advanced Tracking Methods</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors">Vikkurty, S., Hegde, N. P., <strong>Sriperambuduri Vinay Kumar</strong>, Thumma, N., Konda, P.</p>
+                <p class="pub-venue">3rd ICCIC 2023, Cognitive Science and Technology, Springer, Singapore, 2025.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-981-97-9266-5_15" target="_blank" rel="noopener">doi: 10.1007/978-981-97-9266-5_15</a>
+                  <button class="btn-cite" onclick="copyCitationText('Vikkurty, S., Hegde, N. P., Sriperambuduri Vinay Kumar, et al. (2025). Enhancing Gameplay with Advanced Tracking Methods. Springer.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C14 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Face Spoof Detection Using Effective Machine Learning Techniques</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors">Hegde, N. P., Sireesha, V., <strong>Vinay Kumar, S.</strong>, Navya Sri, P., Sri Sai Mahitha, P.</p>
+                <p class="pub-venue">3rd ICCIC 2023, Cognitive Science and Technology, Springer, Singapore, 2025.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-981-97-9266-5_44" target="_blank" rel="noopener">doi: 10.1007/978-981-97-9266-5_44</a>
+                  <button class="btn-cite" onclick="copyCitationText('Hegde, N. P., Sireesha, V., Vinay Kumar, S., et al. (2025). Face Spoof Detection Using Effective ML Techniques. Springer.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C15 -->
+              <article class="pub-card" data-cat="conference scopus">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Efficient Personal Guide with Effective Impacts and Importance of Augmented Reality (AR)</h3>
+                  <span class="scopus-badge">SCOPUS</span>
+                </div>
+                <p class="pub-authors">Dr. Sireesha Vikkurty, Dr. Nagaratna P. Hegde, <strong>Sriperambuduri Vinay Kumar</strong>, Priyatham Konda, Nishanth Thumma</p>
+                <p class="pub-venue">3rd International Conference on Cognitive &amp; Intelligent Computing (ICCIC-2023), Dec 2023.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Conference Proceeding</span>
+                  <button class="btn-cite" onclick="copyCitationText('Vikkurty, S., Hegde, N. P., Sriperambuduri Vinay Kumar, et al. (2023). Efficient Personal Guide with AR. ICCIC-2023.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C16 -->
+              <article class="pub-card" data-cat="conference scopus">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Effective Prediction of Brain Tumor Using Machine Learning Algorithms</h3>
+                  <span class="scopus-badge">SCOPUS</span>
+                </div>
+                <p class="pub-authors">Dr. V. Sireesha, Dr. Nagaratna Hegde, <strong>S. Vinay Kumar</strong>, Anishka R, Meghana G</p>
+                <p class="pub-venue">International Conference on Communications and Cyber-Physical Engineering (ICCCE), Vol. 1096, pp. 489–495, April 2023, CMR College.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Conference Proceeding</span>
+                  <button class="btn-cite" onclick="copyCitationText('Sireesha, V., Hegde, N., Vinay Kumar, S., et al. (2023). Prediction of Brain Tumor using ML Algorithms. ICCCE.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C17 -->
+              <article class="pub-card" data-cat="conference scopus">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">E-Voting Using Block Chain Technology and OTP Generation</h3>
+                  <span class="scopus-badge">SCOPUS</span>
+                </div>
+                <p class="pub-authors">Dr. V. Sireesha, Dr. Nagaratna Hegde, <strong>S. Vinay Kumar</strong>, P. Sree Teja, P. Himaja</p>
+                <p class="pub-venue">International Conference on Communications and Cyber-Physical Engineering (ICCCE), Vol. 1096, pp. 481–487, April 2023, CMR College.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Conference Proceeding</span>
+                  <button class="btn-cite" onclick="copyCitationText('Sireesha, V., Hegde, N., Vinay Kumar, S., et al. (2023). E-Voting Using Block Chain Technology. ICCCE.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C18 -->
+              <article class="pub-card" data-cat="conference scopus">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Building an Efficient Product Recommender System</h3>
+                  <span class="scopus-badge">SCOPUS</span>
+                </div>
+                <p class="pub-authors">Dr. V. Sireesha, Dr. Nagaratna Hegde, <strong>S. Vinay Kumar</strong>, Hasini Reddy Patlolla, Dr. G. P. Hegde</p>
+                <p class="pub-venue">International Conference on Communications and Cyber-Physical Engineering (ICCCE), Vol. 1096, pp. 453–459, April 2023.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Conference Proceeding</span>
+                  <button class="btn-cite" onclick="copyCitationText('Sireesha, V., Hegde, N., Vinay Kumar, S., et al. (2023). Building an Efficient Product Recommender System. ICCCE.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C19 -->
+              <article class="pub-card" data-cat="conference scopus">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Enhancing Power Generation Using Efficient Smart Solar Tracker</h3>
+                  <span class="scopus-badge">SCOPUS</span>
+                </div>
+                <p class="pub-authors">Dr. V. Sireesha, Dr. Nagaratna Hegde, <strong>S. Vinay Kumar</strong>, SVN Ramakanth, Nikhil R</p>
+                <p class="pub-venue">International Conference on Communications and Cyber-Physical Engineering (ICCCE), Vol. 1096, pp. 473–480, April 2023, CMR College.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Conference Proceeding</span>
+                  <button class="btn-cite" onclick="copyCitationText('Sireesha, V., Hegde, N., Vinay Kumar, S., et al. (2023). Enhancing Power Generation Using Smart Solar Tracker. ICCCE.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C20 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">A Modified-PSO Algorithm to Schedule Scientific Workflows in Cloud</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors"><strong>Sriperambuduri Vinay Kumar</strong>, Nagaratna M</p>
+                <p class="pub-venue">2nd ICCIC 2022, Cognitive Science and Technology, Springer, Singapore, 2023.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-981-99-2746-3_48" target="_blank" rel="noopener">doi: 10.1007/978-981-99-2746-3_48</a>
+                  <button class="btn-cite" onclick="copyCitationText('Sriperambuduri, V. K., & Nagaratna, M. (2023). A Modified-PSO Algorithm to Schedule Scientific Workflows in Cloud. Springer ICCIC.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C21 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Task Scheduling in Cloud Computing Using PSO Algorithm (Best Paper Award)</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors"><strong>Sriperambuduri Vinay Kumar</strong>, Nagaratna M., Marrivada L. H.</p>
+                <p class="pub-venue">Smart Intelligent Computing and Applications, SIST vol. 282, Springer, Singapore, 2022.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-981-16-9669-5_49" target="_blank" rel="noopener">doi: 10.1007/978-981-16-9669-5_49</a>
+                  <button class="btn-cite" onclick="copyCitationText('Sriperambuduri, V. K., Nagaratna, M., & Marrivada, L. H. (2022). Task Scheduling in Cloud Computing Using PSO Algorithm. Springer SIST.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C22 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">A Best Price Web Scraping Application for E-commerce Websites</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors"><strong>Sriperambuduri Vinay Kumar</strong>, Sireesha, V., Hegde, N. P.</p>
+                <p class="pub-venue">2nd ICCIC 2022, Cognitive Science and Technology, Springer, Singapore, 2023.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1007/978-981-99-2742-5_57" target="_blank" rel="noopener">doi: 10.1007/978-981-99-2742-5_57</a>
+                  <button class="btn-cite" onclick="copyCitationText('Sriperambuduri, V. K., Sireesha, V., & Hegde, N. P. (2023). A Best Price Web Scraping Application for E-commerce Websites. Springer.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C23 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Automatic Essay Grading System Using Deep Neural Network</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors">V. Sireesha, Nagaratna Hegde, <strong>S. Vinay Kumar</strong>, Alekhya Naravajhula, Dulugunti Sai Haritha</p>
+                <p class="pub-venue">2nd International Conference on Cognitive &amp; Intelligent Computing (ICCIC-2022), Springer, Dec 2022.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Conference Proceeding</span>
+                  <button class="btn-cite" onclick="copyCitationText('Sireesha, V., Hegde, N., Vinay Kumar, S., et al. (2022). Automatic Essay Grading System Using Deep Neural Network. Springer ICCIC.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C24 -->
+              <article class="pub-card" data-cat="conference scopus">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Geometrical Feature Extraction Based Drivers Drowsiness Expression Detection</h3>
+                  <span class="scopus-badge">SCOPUS</span>
+                </div>
+                <p class="pub-authors">G. P. Hegde, Nagaratna P. Hegde, Vikkurty Sireesha, <strong>S. Vinay Kumar</strong></p>
+                <p class="pub-venue">2nd International Conference on Cognitive &amp; Intelligent Computing (ICCIC-2022), Dec 2022.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Conference Proceeding</span>
+                  <button class="btn-cite" onclick="copyCitationText('Hegde, G. P., Hegde, N. P., Sireesha, V., & Vinay Kumar, S. (2022). Geometrical Feature Extraction Based Drivers Drowsiness Expression Detection. ICCIC-2022.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C25 -->
+              <article class="pub-card" data-cat="conference scopus ieee">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">Disguised Face Detection Using Machine Learning</h3>
+                  <span class="scopus-badge">IEEE SCOPUS</span>
+                </div>
+                <p class="pub-authors"><strong>Sriperambuduri Vinay Kumar</strong>, V. Sireesha, N. P. Hegde, A. Kollipara</p>
+                <p class="pub-venue">4th IEEE International Conference on Artificial Intelligence and Speech Technology (AIST), Delhi, India, pp. 1–5, 2022.</p>
+                <div class="pub-footer">
+                  <a href="https://doi.org/10.1109/AIST55798.2022.10065003" target="_blank" rel="noopener">doi: 10.1109/AIST55798.2022.10065003</a>
+                  <button class="btn-cite" onclick="copyCitationText('Sriperambuduri, V. K., Sireesha, V., Hegde, N. P., & Kollipara, A. (2022). Disguised Face Detection Using Machine Learning. IEEE AIST.')">Copy Citation</button>
+                </div>
+              </article>
+
+              <!-- C26 -->
+              <article class="pub-card" data-cat="conference scopus springer">
+                <div class="pub-card-header">
+                  <h3 class="pub-title">A Notification Alert System with Heartbeat and Temperature Sensors for Abnormal Health Conditions</h3>
+                  <span class="scopus-badge">Springer SCOPUS</span>
+                </div>
+                <p class="pub-authors">V. Sireesha, M. S. V. Sashi Kumar, <strong>S. Vinay Kumar</strong>, R. M. Shiva Krishna</p>
+                <p class="pub-venue">4th International Conference on Smart Computing and Informatics (SCI-2020), Springer, Oct 2020.</p>
+                <div class="pub-footer">
+                  <span style="color:var(--text-light);">Conference Proceeding</span>
+                  <button class="btn-cite" onclick="copyCitationText('Sireesha, V., Sashi Kumar, M. S. V., Vinay Kumar, S., & Shiva Krishna, R. M. (2020). A Notification Alert System with Sensors. Springer SCI.')">Copy Citation</button>
+                </div>
+              </article>
+
+            </div>
+          </section>
+
+        </div>
+
+        <!-- ==========================================================================
+             Sidebar Column (Specializations, Certifications, FDPs Attended & Organized)
+             ========================================================================== -->
+        <aside class="side-column" aria-label="Skills, Certifications and Academic Service">
+          
+          <!-- Areas of Interest & Subjects Taught -->
+          <section class="resume-section" aria-labelledby="skills-heading">
+            <h2 id="skills-heading" class="section-title">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+              Core Domains &amp; Teaching
+            </h2>
+
+            <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+              <div>
+                <h3 style="font-size: 0.825rem; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.35rem; font-weight: 700;">Areas of Interest</h3>
+                <div class="badge-cloud">
+                  <span class="badge-pill featured">Cloud Computing</span>
+                  <span class="badge-pill featured">Full Stack Web Dev</span>
+                  <span class="badge-pill featured">Machine Learning</span>
+                  <span class="badge-pill featured">Internet of Things (IoT)</span>
+                  <span class="badge-pill">Workflow Scheduling</span>
+                  <span class="badge-pill">Optimization Algorithms</span>
+                </div>
+              </div>
+
+              <div>
+                <h3 style="font-size: 0.825rem; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.35rem; font-weight: 700;">Subjects Taught (UG &amp; PG)</h3>
+                <div class="badge-cloud">
+                  <span class="badge-pill">Full Stack Web Development</span>
+                  <span class="badge-pill">OOP through Java</span>
+                  <span class="badge-pill">Cloud Computing</span>
+                  <span class="badge-pill">Automata Theory</span>
+                  <span class="badge-pill">Logic &amp; Switching Theory</span>
+                  <span class="badge-pill">Robotic Process Automation</span>
+                  <span class="badge-pill">Internet of Things</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Global Industry Certifications -->
+          <section class="resume-section" aria-labelledby="certifications-heading">
+            <h2 id="certifications-heading" class="section-title">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z" stroke="currentColor" stroke-width="2" fill="none"/>
+              </svg>
+              Global Industry Certifications
+            </h2>
+
+            <div class="timeline" style="gap: 0.5rem;">
+              <div class="cert-item">
+                <span class="cert-title">MongoDB Certified Associate Developer</span>
+                <span class="cert-meta"><span>MongoDB Inc.</span> <time datetime="2026-08-02">02-08-2026</time></span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-title">AWS Certified Cloud Practitioner</span>
+                <span class="cert-meta"><span>Amazon Web Services</span> <time datetime="2024-03">2021 (Renewed Mar 2024)</time></span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-title">Certified RPA Developer</span>
+                <span class="cert-meta"><span>UiPath</span> <time datetime="2019">2019</time></span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-title">System Architect 7.2</span>
+                <span class="cert-meta"><span>Pega Systems Inc.</span> <time datetime="2017">2017</time></span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-title">System Architect 7.1</span>
+                <span class="cert-meta"><span>Pega Systems Inc.</span> <time datetime="2015">2015</time></span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-title">EMC Academic Associate – Cloud Infrastructure &amp; Services</span>
+                <span class="cert-meta"><span>Dell EMC</span> <time datetime="2016">2016</time></span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-title">EMC Academic Associate – Information Storage &amp; Mgmt</span>
+                <span class="cert-meta"><span>Dell EMC</span> <time datetime="2016">2016</time></span>
+              </div>
+            </div>
+          </section>
+
+          <!-- NPTEL Elite Certifications -->
+          <section class="resume-section" aria-labelledby="nptel-heading">
+            <h2 id="nptel-heading" class="section-title">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>
+              </svg>
+              NPTEL Elite Ranks (MoE)
+            </h2>
+
+            <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+              <p style="font-size: 0.825rem; font-weight: 700; color: var(--accent-gold); text-transform: uppercase;">
+                ★ Top 1% Rank in 6 Courses
+              </p>
+              <div class="badge-cloud">
+                <span class="badge-pill nptel-top">AI Concepts &amp; Tech (Nov 2025)</span>
+                <span class="badge-pill nptel-top">Programming in Java (Nov 2024)</span>
+                <span class="badge-pill nptel-top">Foundation of Cloud IoT Edge ML (Apr 2024)</span>
+                <span class="badge-pill nptel-top">Human Computer Interfaces (Oct 2022)</span>
+                <span class="badge-pill nptel-top">Machine Learning, ML (Apr 2022)</span>
+                <span class="badge-pill nptel-top">Cloud Computing (Mar 2018)</span>
+              </div>
+
+              <p style="font-size: 0.825rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; margin-top: 0.25rem;">
+                ★ Top 5% Rank in 2 Courses
+              </p>
+              <div class="badge-cloud">
+                <span class="badge-pill">Industry 4.0 &amp; IIoT (Apr 2019)</span>
+                <span class="badge-pill">Internet of Things (Oct 2017)</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Resource Person & Invited Talks -->
+          <section class="resume-section" aria-labelledby="resource-heading">
+            <h2 id="resource-heading" class="section-title">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+              </svg>
+              Resource Person &amp; Speaker
+            </h2>
+
+            <ul class="compact-list">
+              <li><strong>Skill Development Program on Python &amp; Java:</strong> Resource Person for 1-Week SDP conducted at Vasavi College of Engineering (21–26 April 2025).</li>
+              <li><strong>ATAL Online FDP on Robotic Process Automation (RPA):</strong> Resource Person organized by NIELIT Gorakhpur (17–21 May 2021).</li>
+              <li><strong>ATAL Online FDP on Robotic Process Automation (RPA):</strong> Resource Person organized by NIELIT Gorakhpur (7–11 September 2020).</li>
+            </ul>
+          </section>
+
+          <!-- Complete Conferences & FDPs Organized -->
+          <section class="resume-section" aria-labelledby="organized-heading">
+            <h2 id="organized-heading" class="section-title">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" fill="none"/>
+              </svg>
+              Conferences &amp; FDPs Organized
+            </h2>
+
+            <div class="scroll-pane-sm">
+              <ul class="compact-list">
+                <li><strong>5th ICCIC-2025:</strong> Organized the 5th International Conference on Cognitive &amp; Intelligent Computing (12–13 Dec 2025).</li>
+                <li><strong>Two-Week FDP on Agentic AI:</strong> Organizing Committee Member (15–27 Dec 2025).</li>
+                <li><strong>4th ICCIC-2024:</strong> Organized the 4th International Conference on Cognitive &amp; Intelligent Computing (29–30 Nov 2024).</li>
+                <li><strong>ATAL FDP on Design Thinking:</strong> Organizing Member for 1-Week National Level FDP (19–24 Aug 2024).</li>
+                <li><strong>3rd ICCIC-2023:</strong> Organized the 3rd International Conference on Cognitive &amp; Intelligent Computing (8–9 Dec 2023).</li>
+                <li><strong>2nd ICCIC-2022:</strong> Organized the 2nd International Conference on Cognitive &amp; Intelligent Computing (27–28 Dec 2022).</li>
+                <li><strong>Innovasia 2K22:</strong> Organized National Level Hackathon (02–03 Dec 2022).</li>
+                <li><strong>5th SCI-2021:</strong> Organized 5th International Conference on Smart Computing and Informatics (17–18 Sept 2021).</li>
+                <li><strong>National FDP on Multi Technology:</strong> Organized 1-Week National Level FDP (28 Jun–03 Jul 2021).</li>
+                <li><strong>4th SCI-2020:</strong> Organized 4th International Conference on Smart Computing and Informatics (09–10 Oct 2020).</li>
+                <li><strong>FDP on Cyber Security in Practical Aspects:</strong> Organized Department FDP (01–05 Sept 2020).</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Complete FDPs & Workshops Attended (Categorized Accordions) -->
+          <section class="resume-section" aria-labelledby="fdps-attended-heading">
+            <h2 id="fdps-attended-heading" class="section-title">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 14l9-5-9-5-9 5 9 5z" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke="currentColor" stroke-width="2" fill="none"/>
+              </svg>
+              FDPs &amp; Workshops Attended (28+)
+            </h2>
+
+            <!-- Accordion 1: AI, ML & Data Science -->
+            <div class="accordion-card">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>AI, Machine Learning &amp; Data Science</span>
+                <span class="acc-icon">▾</span>
+              </div>
+              <div class="accordion-content">
+                <div>• <strong>Mathematical Foundations of Machine Learning</strong> (Jan–Apr 2026, NPTEL MoE).</div>
+                <div>• <strong>Advanced Computational Intelligence: From Statistical Foundations to Bio-inspired Deep Learning Architectures</strong> (09–14 Mar 2026, VNR VJIET Hyderabad).</div>
+                <div>• <strong>Two-Week FDP on "Agentic AI"</strong> (15–27 Dec 2025, VCE in assoc. with Brainovision).</div>
+                <div>• <strong>Artificial Intelligence: Concepts and Techniques</strong> (Jul–Oct 2025, NPTEL MoE).</div>
+                <div>• <strong>Machine Learning, ML</strong> (Feb–Apr 2022, NPTEL MoE).</div>
+                <div>• <strong>Introduction to Soft Computing</strong> (Jan–Mar 2021, NPTEL MoE).</div>
+                <div>• <strong>Recent Trends in Data Science</strong> (11–16 Dec 2017, VCE &amp; NIT Warangal).</div>
+                <div>• <strong>National Conference on Big Data Analytics &amp; Cloud Computing</strong> (29–31 Dec 2015, OU Hyderabad).</div>
+              </div>
+            </div>
+
+            <!-- Accordion 2: Cloud, IoT, Systems & Industry -->
+            <div class="accordion-card">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Cloud, IoT, RPA &amp; Software Systems</span>
+                <span class="acc-icon">▾</span>
+              </div>
+              <div class="accordion-content" style="display:none;">
+                <div>• <strong>Programming in Java</strong> (Jul–Oct 2024, NPTEL MoE).</div>
+                <div>• <strong>Foundation of Cloud IoT Edge ML</strong> (Feb–Apr 2024, NPTEL MoE).</div>
+                <div>• <strong>Design &amp; Implementation of Human-Computer Interfaces</strong> (Jul–Oct 2022, NPTEL MoE).</div>
+                <div>• <strong>Advanced RPA Developer</strong> (03–07 Jun 2019, SRM University Chennai).</div>
+                <div>• <strong>Introduction to Industry 4.0 and Industrial IoT</strong> (Jan–Apr 2019, NPTEL MoE).</div>
+                <div>• <strong>Embedded Systems - Design Verification and Test</strong> (Jul–Oct 2018, NPTEL MoE).</div>
+                <div>• <strong>BRIDGE 2018 Conference</strong> (24-10-2018, Hyderabad).</div>
+                <div>• <strong>Train the Trainer: Senior System Architect Essentials</strong> (13–25 Jun 2016, Pega Systems).</div>
+                <div>• <strong>Train the Trainer: System Architect Essentials</strong> (09 Nov–18 Dec 2015, Pega Systems).</div>
+                <div>• <strong>Web Application and Web Penetration Security</strong> (30 May–03 Jun 2016, E2Labs).</div>
+                <div>• <strong>FDP Programme by Accenture</strong> (27-01-2015, Hyderabad Office).</div>
+              </div>
+            </div>
+
+            <!-- Accordion 3: Pedagogy, Management & Leadership -->
+            <div class="accordion-card">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Pedagogy, Leadership &amp; TEQIP Programs</span>
+                <span class="acc-icon">▾</span>
+              </div>
+              <div class="accordion-content" style="display:none;">
+                <div>• <strong>Teaching And Learning in Engineering (TALE)</strong> (Jan–Feb 2023, NPTEL MoE).</div>
+                <div>• <strong>50th Orientation Programme</strong> (04 Jun–02 Jul 2018, JNTU Hyderabad).</div>
+                <div>• <strong>Entrepreneurship Faculty Educator Program</strong> (10–14 Oct 2017, PM Yuva Yojana &amp; EDII Chennai).</div>
+                <div>• <strong>NEN Entrepreneurship Educator Programme</strong> (14–16 Jul 2016, Aurora Business School).</div>
+                <div>• <strong>Outcome Based Education Workshop</strong> (18–19 Jan 2016, BMS College of Engg., IUCEE &amp; Inpods at DY Patil Pune).</div>
+                <div>• <strong>Outcome Based Education and Accreditation Awareness</strong> (14-07-2015, JNTU Hyderabad).</div>
+                <div>• <strong>14th Management Capacity Enhancement Program (Refresher)</strong> (11–15 Oct 2015, IIM Indore under TEQIP).</div>
+                <div>• <strong>Advanced Pedagogy on Effective Engineering Teaching</strong> (16–17 Jul &amp; 23–24 Aug 2014, Innovation India under TEQIP).</div>
+                <div>• <strong>Basic Pedagogy Training</strong> (13–16 Jun 2014, Equate India under TEQIP).</div>
+                <div>• <strong>Enhancing Professional &amp; Instructional Skills of Young Faculty (EPISFY-07)</strong> (11–18 Jun 2007, VCE).</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Research & Consultancy Engagements -->
+          <section class="resume-section" aria-labelledby="consultancy-heading">
+            <h2 id="consultancy-heading" class="section-title">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke="currentColor" stroke-width="2" fill="none"/>
+              </svg>
+              Research &amp; Industry Consultancy
+            </h2>
+
+            <ul class="compact-list">
+              <li><strong>Scale Systems, US (2025):</strong> Full-stack web application development and cloud deployment.</li>
+              <li><strong>ByDesign India, Bangalore (2013):</strong> Smart LED Bulb consultancy project and firmware control.</li>
+              <li><strong>iLumi Solutions Inc., US (2012):</strong> Smart Bulb hardware design and mobile application connectivity.</li>
+              <li><strong>IBM Corporate Training (2008–2011):</strong> Conducted training for IBM employees as part of M.S. (Tech) CS program at VCE.</li>
+              <li><strong>Lead Industry-Institute-Interaction:</strong> Partnered with Microsoft, Progress, CSC, and CPOY during 2007–2012 at VCE.</li>
+            </ul>
+          </section>
+
+        </aside>
+
+      </div>
+
+      <!-- Footer -->
+      <footer class="resume-footer no-print">
+        <p>
+           September 2026
+        </p>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast-popup" role="alert" aria-live="polite">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+    <span>Citation copied to clipboard!</span>
+  </div>
+
+  <script>
+    // Theme Engine
+    (function () {
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      const themeBtnText = document.getElementById('themeBtnText');
+      const root = document.documentElement;
+
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      let currentTheme = prefersDark ? 'dark' : 'light';
+      root.setAttribute('data-theme', currentTheme);
+      updateButton();
+
+      themeToggleBtn.addEventListener('click', function () {
+        currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+        root.setAttribute('data-theme', currentTheme);
+        updateButton();
+      });
+
+      function updateButton() {
+        themeBtnText.textContent = currentTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+      }
+    })();
+
+    // Publication Filter & Live Search
+    let currentPubCategory = 'all';
+
+    function setPubCategory(cat, btn) {
+      currentPubCategory = cat;
+      document.querySelectorAll('.pub-tabs .tab-btn').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      filterPubsLive();
+    }
+
+    function filterPubsLive() {
+      const query = (document.getElementById('pubSearch').value || '').toLowerCase().trim();
+      const cards = document.querySelectorAll('#pubFeed .pub-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const catData = card.getAttribute('data-cat') || '';
+        const textData = card.innerText.toLowerCase();
+
+        const matchesCat = (currentPubCategory === 'all') || catData.includes(currentPubCategory);
+        const matchesSearch = (query === '') || textData.includes(query);
+
+        if (matchesCat && matchesSearch) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      document.getElementById('pubCountLabel').textContent = visibleCount + (visibleCount === 1 ? ' Paper' : ' Papers');
+    }
+
+    // Accordion Toggle
+    function toggleAccordion(header) {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector('.acc-icon');
+      if (content.style.display === 'none' || !content.style.display) {
+        content.style.display = 'flex';
+        icon.textContent = '▴';
+      } else {
+        content.style.display = 'none';
+        icon.textContent = '▾';
+      }
+    }
+
+    // Copy Citation Helper
+    function copyCitationText(text) {
+      const temp = document.createElement('textarea');
+      temp.value = text;
+      document.body.appendChild(temp);
+      temp.select();
+      try {
+        document.execCommand('copy');
+        showToastNotification();
+      } catch (err) {
+        console.error('Failed to copy', err);
+      }
+      document.body.removeChild(temp);
+    }
+
+    function showToastNotification() {
+      const toast = document.getElementById('toast');
+      toast.classList.add('visible');
+      setTimeout(() => {
+        toast.classList.remove('visible');
+      }, 2200);
+    }
+  </script>
+</body>
+</html>
